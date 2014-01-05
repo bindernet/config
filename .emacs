@@ -32,7 +32,7 @@
 
 
 
-;; Make html export for org-mode include a CSS file inline.
+;; Make html export for org-mode include a custom CSS file inline.
 (let* ((dir (ignore-errors (file-name-directory (buffer-file-name))))
        (path (concat dir "style.css"))
        (homestyle (or (null dir) (null (file-exists-p path))))
@@ -46,6 +46,18 @@
 				 (buffer-string))
 			       "/*]]>*/-->\n"
 			       "</style>\n")))
+
+(add-hook 'java-mode-hook 'linum-mode)
+
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  )
+
+(require 'fill-column-indicator)
+(setq-default fill-column 80)
+(column-number-mode 1)
 
 
 
