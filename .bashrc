@@ -112,8 +112,9 @@
 # alias vdir='ls --color=auto --format=long'
 # alias ll='ls -l'                              # long list
 # alias la='ls -A'                              # all but . and ..
- alias l='ls -CF --color'                              #
-
+alias l='ls -CF --color'                        
+alias s='cd ..'
+ 
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
