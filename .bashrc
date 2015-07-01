@@ -114,6 +114,7 @@
 # alias la='ls -A'                              # all but . and ..
 alias l='ls -CF --color'                        
 alias s='cd ..'
+alias e='emacsclient'
  
 # Umask
 #
@@ -203,9 +204,7 @@ csvhd() {
 head -n1 $1 | tr ',' '\n'
 }
 
-alias s='cd ..'
-alias e='emacsclient'
-export LESSOPEN="| /bin/src-hilite-lesspipe.sh %s"
+#export LESSOPEN="| /bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 export PS1="\e[0;32m\u@\h\e[m \e[0;33m\w\e[m\n\$ "
